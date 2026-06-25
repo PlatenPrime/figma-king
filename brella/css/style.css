@@ -1,0 +1,120 @@
+:root {
+  --layout-width: 1440px;
+  --header-height: 90px;
+
+  --color-primary: #214E41;
+  --button-bg-color-primary: #43806C;
+  --color-white: #ffffff;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-logo: "Libre Baskerville", Georgia, serif;
+}
+
+body {
+  width: 100%;
+  max-width: var(--layout-width);
+  margin-inline: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--layout-width);
+  margin-inline: auto;
+}
+
+/* Header / Navbar */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  padding-inline: 80px;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.header__logo {
+  font-family: var(--font-logo);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__menu a {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-primary);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.header__menu a:hover {
+  opacity: 0.7;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background-color: var(--button-bg-color-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.header__cta:hover {
+  opacity: 0.9;
+}
+
+.header__login,
+.header__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-primary);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.header__login:hover,
+.header__lang:hover {
+  opacity: 0.7;
+}
+
+.header__chevron {
+  flex-shrink: 0;
+}
