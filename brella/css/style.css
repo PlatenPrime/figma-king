@@ -1,18 +1,21 @@
-
-
 :root {
   --layout-width: 1440px;
+  --content-width: 1200px;
+  --content-gutter: clamp(16px, 8.333vw, 120px);
   --header-height: 90px;
-  --hero-height: 690px;
+  --hero-height: 720px;
   --hero-features-overlap: 72px;
   --hero-features-width: 1200px;
   --hero-features-height: 171px;
+  --why-brella-height: 728px;
+  --why-brella-inner-height: 432px;
+  --brella-brings-height: 640px;
 
+  --color-brella-brings-light: #e4ece9;
 
   --gutter: clamp(16px, 3.125vw, 45px);
   --gutter-hero: clamp(16px, 8.333vw, 120px);
   --gutter-header-end: clamp(16px, 5.384vw, 77.53px);
-
 
   --header-nav-start: 400px;
   --header-logo-width: 82.76px;
@@ -23,7 +26,7 @@
   --color-primary: #214e41;
   --button-bg-color-primary: #43806c;
   --color-white: #ffffff;
-  --color-text-muted: #5a6b65;
+  --color-text-muted: #43806c;
   --color-text-black: #222222;
   --color-border: #e2e8e5;
 
@@ -44,26 +47,34 @@ body {
   margin-inline: auto;
 }
 
+.content-container {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
 /* Header / Navbar */
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: var(--layout-width);
   margin-inline: auto;
   height: var(--header-height);
-  padding-inline: var(--gutter) var(--gutter-header-end);
   background-color: var(--color-white);
+  padding-left: 45px;
+  padding-right: 77.53px;
 }
 
-.header__logo {
-  display: block;
-  flex-shrink: 0;
-  line-height: 0;
-}
+
 
 .header__logo img {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
   display: block;
   height: 24px;
   width: auto;
@@ -71,28 +82,27 @@ body {
 }
 
 .header__nav {
+  flex: 1;
+  margin-left: 350px;
   display: flex;
   align-items: center;
-  flex: 1;
-  min-width: 0;
-  gap: var(--header-nav-gap);
-  margin-left: calc(
-    var(--header-nav-start) - var(--gutter) - var(--header-logo-width)
-  );
+  justify-content: space-between;
+  margin-top: 19px;
+  margin-bottom: 31px;
+  border: 1px solid red;
 }
 
 .header__menu {
   display: flex;
-  align-items: center;
-  gap: var(--header-menu-gap);
-  padding-left: var(--header-menu-offset);
-  flex-shrink: 0;
+  flex:1;
+  justify-content: space-evenly;
+
 }
 
 .header__menu a {
   font-family: var(--font-raleway);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
   color: var(--color-primary);
@@ -107,9 +117,10 @@ body {
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 36px;
   margin-left: auto;
   flex-shrink: 0;
+  border: 1px solid blue;
 }
 
 .header__cta {
@@ -163,17 +174,16 @@ body {
   max-width: var(--layout-width);
   margin-inline: auto;
   min-height: var(--hero-height);
-  margin-bottom: 68px;
   padding-bottom: var(--hero-features-overlap);
   background-color: #f5f3ef;
   background-image: url("../img/screen1_back.jpg");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: left bottom;
   background-size: cover;
 }
 
 .hero__inner {
-  padding: 161px var(--gutter) 120px var(--gutter-hero);
+  padding-top: 161px;
 }
 
 .hero__content {
@@ -188,7 +198,8 @@ body {
   line-height: 46px;
   letter-spacing: -0.02em;
   color: var(--color-primary);
-  text-wrap:balance;
+  text-align: left;
+  text-wrap: pretty;
 }
 
 .hero__search {
@@ -268,7 +279,6 @@ body {
   height: var(--hero-features-height);
   max-width: var(--hero-features-width);
   box-shadow: 0px 4px 4px 0px #00000026;
-
 }
 
 .hero__features-list {
@@ -297,26 +307,198 @@ body {
 .hero__feature-title {
   font-family: var(--font-raleway);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   color: var(--color-primary);
 }
 
 .hero__feature-desc {
   margin-top: 4px;
-  font-family: var(--font-sans);
+  font-family: var(--font-raleway);
   font-size: 14px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 20px;
+  color: var(--color-primary);
+}
+
+/* Why Brella / Screen 2 */
+
+.why-brella {
+  width: 100%;
+  height: var(--why-brella-height);
+  background-color: var(--color-white);
+  border: 1px solid blue;
+  padding-top: 176px;
+}
+
+.why-brella__inner {
+  height: var(--why-brella-inner-height);
+  border: 1px solid red;
+  padding: 37px 60px 35px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.why-brella__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px;
+}
+
+.why-brella__label {
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05px;
+  text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
+.why-brella__title {
+  margin-top: 16px;
+  font-family: var(--font-roboto);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  color: var(--color-primary);
+  text-align: left;
+  text-wrap: pretty;
+  
+}
 
+.why-brella__desc {
+  margin-top: 48px;
+  font-family: var(--font-raleway);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-text-muted);
+  
+}
+
+.why-brella__link {
+  margin-top: 40px;
+  font-family: var(--font-raleway);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.why-brella__link:hover {
+  opacity: 0.7;
+}
+
+/* Brella Brings / Screen 3 */
+
+.brella-brings {
+  width: 100%;
+  height: var(--brella-brings-height);
+}
+
+.brella-brings__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: var(--brella-brings-height);
+}
+
+.brella-brings__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 60px 60px 120px;
+  background-color: var(--color-brella-brings-light);
+}
+
+.brella-brings__label {
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.brella-brings__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brella-brings__item {
+  font-family: var(--font-roboto);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.brella-brings__item--active {
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.brella-brings__arrow {
+  margin-left: 8px;
+}
+
+.brella-brings__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  /* padding: 60px 120px 60px 60px; */
+  background-color: var(--color-primary);
+  border: 1px solid yellow;
+}
+
+.brella-brings__content p {
+  max-width: 480px;
+  font-family: var(--font-raleway);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  color: var(--color-white);
+  text-wrap: balance;
+  border: 1px solid yellow;
+}
 
 @media (max-width: 1024px) {
+  .brella-brings__inner {
+    grid-template-columns: 1fr;
+  }
 
+  .brella-brings__nav {
+    padding: 48px var(--content-gutter);
+  }
+
+  .brella-brings__content {
+    padding: 48px var(--content-gutter);
+  }
 }
 
 @media (max-width: 768px) {
+  .brella-brings__nav {
+    padding: 32px var(--gutter);
+  }
 
+  .brella-brings__content {
+    padding: 32px var(--gutter);
+  }
+
+  .brella-brings__item {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }

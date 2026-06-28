@@ -6,19 +6,17 @@
     <title>Brella</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
       <a href="#" class="header__logo">
-        <img
-          src="img/logo.png"
-          alt="Brella"
-          width="300"
-          height="87"
-        />
+        <img src="img/logo.png" alt="Brella" width="220" height="87" />
       </a>
 
       <nav class="header__nav" aria-label="Main navigation">
@@ -34,28 +32,55 @@
         <div class="header__actions">
           <a href="#" class="header__cta">Request a demo</a>
 
-          <button type="button" class="header__login" aria-haspopup="true" aria-expanded="false">
+          <button
+            type="button"
+            class="header__login"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Login
-            <svg class="header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <svg
+              class="header__chevron"
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
 
-          <button type="button" class="header__lang" aria-label="Select language">EN</button>
+          <button
+            type="button"
+            class="header__lang"
+            aria-label="Select language"
+          >
+            EN
+          </button>
         </div>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__inner container">
+        <div class="hero__inner content-container">
           <div class="hero__content">
             <h1 class="hero__title" id="hero-title">
-              Give your team peace of mind with supplemental health insurance from Brella.
+              Give your team peace of mind with supplemental health insurance
+              from Brella.
             </h1>
 
             <form class="hero__search" action="#" method="get">
-              <label class="hero__search-label" for="hero-query">I'm wondering...</label>
+              <label class="hero__search-label" for="hero-query"
+                >I'm wondering...</label
+              >
               <div class="hero__search-row">
                 <input
                   class="hero__search-input"
@@ -73,41 +98,122 @@
         <div class="hero__features">
           <ul class="hero__features-list">
             <li class="hero__feature">
-              <div class="hero__feature-icon hero__feature-icon--coverage" aria-hidden="true">
-                <img src="img/coverage.png" alt="Coverage" width="41" height="45">
+              <div
+                class="hero__feature-icon hero__feature-icon--coverage"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/coverage.png"
+                  alt="Coverage"
+                  width="41"
+                  height="45"
+                />
               </div>
               <div class="hero__feature-text">
                 <h2 class="hero__feature-title">More coverage</h2>
                 <p class="hero__feature-desc">
-                  Brella covers 13,000+ injuries and illnesses from concussions to cancer.
+                  Brella covers 13,000+ injuries and illnesses from concussions
+                  to cancer.
                 </p>
               </div>
             </li>
 
             <li class="hero__feature">
-              <div class="hero__feature-icon hero__feature-icon--hassle" aria-hidden="true">
-                <img src="img/less-hassle.png" alt="Hassle" width="46" height="45">
+              <div
+                class="hero__feature-icon hero__feature-icon--hassle"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/less-hassle.png"
+                  alt="Hassle"
+                  width="46"
+                  height="45"
+                />
               </div>
               <div class="hero__feature-text">
                 <h2 class="hero__feature-title">Less hassle</h2>
                 <p class="hero__feature-desc">
-                  One easy-to-manage plan with paperless install and online admin tools.
+                  One easy-to-manage plan with paperless install and online
+                  admin tools.
                 </p>
               </div>
             </li>
 
             <li class="hero__feature">
-              <div class="hero__feature-icon hero__feature-icon--benefits" aria-hidden="true">
-                <img src="img/faster-benefits.png" alt="Benefits" width="58" height="45">
+              <div
+                class="hero__feature-icon hero__feature-icon--benefits"
+                aria-hidden="true"
+              >
+                <img
+                  src="img/faster-benefits.png"
+                  alt="Benefits"
+                  width="58"
+                  height="45"
+                />
               </div>
               <div class="hero__feature-text">
                 <h2 class="hero__feature-title">Faster benefits</h2>
                 <p class="hero__feature-desc">
-                  Brella pays claims in hours—not weeks so your people can rest easy.
+                  Brella pays claims in hours—not weeks so your people can rest
+                  easy.
                 </p>
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="why-brella container" aria-labelledby="why-brella-title">
+        <div class="why-brella__inner content-container">
+          <div class="why-brella__intro">
+            <p class="why-brella__label">Why Brella?</p>
+            <h2 class="why-brella__title" id="why-brella-title">
+              Today, any health insurance deductible can feel like a high
+              deductible.
+            </h2>
+            <p class="why-brella__desc">
+              Brella's supplemental health plan enhances your health benefit
+              strategy to ensure that health hardships don't become financial
+              burdens.
+            </p>
+            <a class="why-brella__link" href="#">See our plan</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="brella-brings container"
+        aria-labelledby="brella-brings-title"
+      >
+        <div class="brella-brings__inner">
+          <div class="brella-brings__nav">
+            <p class="brella-brings__label" id="brella-brings-title">
+              Brella brings
+            </p>
+            <ul class="brella-brings__list">
+              <li class="brella-brings__item brella-brings__item--active">
+                Customizable benefits
+                <span class="brella-brings__arrow" aria-hidden="true">→</span>
+              </li>
+              <li class="brella-brings__item">Paperless install &amp; admin</li>
+              <li class="brella-brings__item">Effortless enrollment</li>
+              <li class="brella-brings__item">Easy claims experience</li>
+              <li class="brella-brings__item">Fast benefit payouts</li>
+              <li class="brella-brings__item">Concierge support</li>
+            </ul>
+          </div>
+
+          <div class="brella-brings__content">
+            <p>
+              Every Brella plan comes with a benefit for Moderate, Severe, and
+              Catastrophic conditions. Employees can select the payout amounts
+              that fit their needs and their budget.
+            </p>
+            <p>
+              Employers can fund part or all of the premiums—or offer Brella as
+              a voluntary benefit. The choice is up to you.
+            </p>
+          </div>
         </div>
       </section>
     </main>
