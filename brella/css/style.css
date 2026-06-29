@@ -9,6 +9,7 @@
   --color-text-muted: #43806c;
   --color-text-black: #222222;
   --color-border: #e2e8e5;
+  --color-orange: #f0a446;
 
   --color-why-brella-accent-line: #e8c5a0;
 
@@ -33,7 +34,6 @@
   --why-brella-height: 728px;
   --why-brella-inner-height: 432px;
   --brella-brings-height: 640px;
-  --why-brella-chart-crossline-color: #f0a446;
 
   --color-brella-brings-light: #e4ece9;
 
@@ -44,6 +44,8 @@
 
 body {
   width: 100%;
+  max-width: var(--layout-width);
+  margin-inline: auto;
 }
 
 .container {
@@ -53,8 +55,37 @@ body {
 }
 
 .content-container {
-  max-width: var(--content-width);
+  width: var(--content-width);
   margin-inline: auto;
+}
+
+.label {
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.05px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-family: var(--font-roboto);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  color: var(--color-primary);
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.desc {
+  font-family: var(--font-raleway);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.02px;
+  color: var(--color-text-muted);
 }
 
 /* Header / Navbar */
@@ -194,13 +225,6 @@ body {
 
 .hero__title {
   max-width: 516px;
-  font-family: var(--font-roboto);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 46px;
-  color: var(--color-primary);
-  text-align: left;
-  text-wrap: pretty;
 }
 
 .hero__search {
@@ -349,35 +373,12 @@ body {
   background-color: rgba(255, 255, 0, 0.1);
 }
 
-.why-brella__label {
-  font-family: var(--font-raleway);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05px;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
 .why-brella__title {
   margin-top: 20px;
-  font-family: var(--font-roboto);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 46px;
-  color: var(--color-primary);
-  text-align: left;
-  text-wrap: pretty;
 }
 
 .why-brella__desc {
   margin-top: 35px;
-  font-family: var(--font-raleway);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0.02px;
-  color: var(--color-text-muted);
 }
 
 .why-brella__link {
@@ -409,7 +410,7 @@ body {
 .why-brella__chart-crossline {
   width: 510px;
   height: 2px;
-  background-color: var(--why-brella-chart-crossline-color);
+  background-color: var(--color-orange);
   position: absolute;
   top: 233px;
   left: 0;
@@ -470,16 +471,6 @@ body {
   background-color: var(--color-brella-brings-light);
 }
 
-.brella-brings__label {
-  font-family: var(--font-raleway);
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.05px;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
 .brella-brings__list {
   margin-top: 32px;
   display: flex;
@@ -532,4 +523,75 @@ body {
 
 .brella-brings__content {
   padding: 48px var(--content-gutter);
+}
+
+.one-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fcae111e;
+  width: 1400px;
+  height: 490.34px;
+  margin-inline: auto;
+  margin-top: 120px;
+}
+.one-plan__more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: auto;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.one-plan__more-content-label {
+  font-weight: 700;
+}
+
+.one-plan__more-content-title {
+  margin-top: 20px;
+}
+
+.one-plan__more-content-desc {
+  margin-top: 34px;
+  max-width: 551px;
+}
+
+.one-plan__more-image-img {
+  width: 560px;
+  height: 298px;
+  margin-left: 40px;
+}
+
+.one-plan__stats {
+display: flex;
+justify-content: space-between;
+  background-color: rgba(0, 255, 0, 0.1);
+  height: 132px;
+}
+
+.one-plan__stats-item {
+  width: 262.5px;
+  height: 132px;
+  background-color: rgba(0, 0, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.one-plan__stats-item-title {
+  font-family: var(--font-roboto);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  color: var(--color-orange);
+}
+
+.one-plan__stats-item-desc {
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--color-primary);
+  text-align: left;
+  text-wrap: balance;
 }
