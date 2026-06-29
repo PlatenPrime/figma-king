@@ -1,46 +1,35 @@
 :root {
+  /* Layout */
   --layout-width: 1440px;
   --content-width: 1200px;
-  --content-gutter: clamp(16px, 8.333vw, 120px);
 
+  /* Colors */
   --color-primary: #214e41;
-  --button-bg-color-primary: #43806c;
-  --color-bg-get-in-touch: #e3eeed;
+  --color-accent: #43806c;
   --color-white: #ffffff;
-  --color-text-muted: #43806c;
   --color-text-black: #222222;
   --color-border: #e2e8e5;
   --color-orange: #f0a446;
 
-  --color-why-brella-accent-line: #e8c5a0;
+  /* Section colors */
+  --color-bg-get-in-touch: #e3eeed;
+  --color-brella-brings-light: #e4ece9;
 
+  /* Typography */
   --font-raleway: "Raleway", system-ui, sans-serif;
   --font-roboto: "Roboto", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
 
+  /* Effects */
   --shadow-card: 0 8px 32px rgba(33, 78, 65, 0.08);
 
+  /* Section sizes */
   --header-height: 90px;
-  --header-nav-start: 400px;
-  --header-logo-width: 82.76px;
-  --header-menu-gap: 50px;
-  --header-menu-offset: 28.47px;
-  --header-nav-gap: 69px;
-
   --hero-height: 720px;
   --hero-features-overlap: 72px;
   --hero-features-width: 1200px;
-  --hero-features-height: 171px;
-
   --why-brella-height: 728px;
   --why-brella-inner-height: 432px;
   --brella-brings-height: 640px;
-
-  --color-brella-brings-light: #e4ece9;
-
-  --gutter: clamp(16px, 3.125vw, 45px);
-  --gutter-hero: clamp(16px, 8.333vw, 120px);
-  --gutter-header-end: clamp(16px, 5.384vw, 77.53px);
 }
 
 body {
@@ -67,7 +56,7 @@ body {
   line-height: 20px;
   letter-spacing: 0.05px;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
 .title {
@@ -86,7 +75,7 @@ body {
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 0.02px;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
 .content-link {
@@ -113,8 +102,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--layout-width);
-  margin-inline: auto;
   height: var(--header-height);
   background-color: var(--color-white);
   padding-left: 45px;
@@ -179,7 +166,7 @@ body {
   justify-content: center;
   padding: 10px 12px;
   border-radius: 6px;
-  background-color: var(--button-bg-color-primary);
+  background-color: var(--color-accent);
   font-family: var(--font-raleway);
   font-size: 14px;
   font-weight: 600;
@@ -290,7 +277,7 @@ body {
 }
 
 .hero__search-input:focus {
-  outline: 2px solid var(--button-bg-color-primary);
+  outline: 2px solid var(--color-accent);
   outline-offset: -2px;
 }
 
@@ -299,7 +286,7 @@ body {
   width: 123px;
   padding: 20px 35px;
   border-radius: 0 6px 6px 0;
-  background-color: var(--button-bg-color-primary);
+  background-color: var(--color-accent);
   font-family: var(--font-raleway);
   font-size: 13px;
   font-weight: 500;
@@ -356,8 +343,7 @@ body {
 
 .hero__feature-text {
   margin-left: -2px;
-
-} 
+}
 
 .hero__feature-desc {
   margin-top: 4px;
@@ -482,7 +468,7 @@ body {
 
 .why-brella__chart-bar-fill {
   width: 78px;
-  background-color: var(--button-bg-color-primary);
+  background-color: var(--color-accent);
 }
 
 .why-brella__chart-bar-fill--deductible {
@@ -530,16 +516,6 @@ body {
   min-height: var(--brella-brings-height);
 }
 
-.brella-brings__label {
-
-  font-family: Raleway;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.05px;
-  text-transform: uppercase;
-}
-
 .brella-brings__nav {
   padding-top: 120px;
   padding-left: 120px;
@@ -556,7 +532,7 @@ body {
   font-size: 32px;
   font-weight: 400;
   line-height: 42px;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
 .brella-brings__item--active {
@@ -859,7 +835,7 @@ body {
   padding: 13px 24px 13px 23px;
   border-radius: 6px;
   border-bottom: none;
-  background-color: var(--button-bg-color-primary);
+  background-color: var(--color-accent);
   font-family: var(--font-raleway);
   font-size: 13px;
   font-weight: 600;
@@ -907,8 +883,7 @@ body {
 
 .footer__heading {
   color: var(--color-white);
-  font-weight: 700;
-  font-family: Raleway;
+  font-family: var(--font-raleway);
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
