@@ -205,7 +205,12 @@
             <ul class="brella-brings__list">
               <li class="brella-brings__item brella-brings__item--active">
                 Customizable benefits
-                <span class="brella-brings__arrow" aria-hidden="true">→</span>
+                <img
+                  class="brella-brings__arrow"
+                  src="img/brella-brings-arrow.png"
+                  alt="Arrow"
+                  aria-hidden="true"
+                />
               </li>
               <li class="brella-brings__item">Paperless install &amp; admin</li>
               <li class="brella-brings__item">Effortless enrollment</li>
@@ -216,15 +221,17 @@
           </div>
 
           <div class="brella-brings__content">
-            <p>
-              Every Brella plan comes with a benefit for Moderate, Severe, and
-              Catastrophic conditions. Employees can select the payout amounts
-              that fit their needs and their budget.
-            </p>
-            <p>
-              Employers can fund part or all of the premiums—or offer Brella as
-              a voluntary benefit. The choice is up to you.
-            </p>
+            <div class="brella-brings__content-inner">
+              <p>
+                Every Brella plan comes with a benefit for Moderate, Severe, and
+                Catastrophic conditions. Employees can select the payout amounts
+                that fit their needs and their budget.
+              </p>
+              <p>
+                Employers can fund part or all of the premiums—or offer Brella
+                as a voluntary benefit. The choice is up to you.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -426,7 +433,143 @@
       </section>
     </main>
     <footer class="footer">
-      
+      <div class="footer__inner content-container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <img
+              class="footer__logo"
+              src="img/logo-white.png"
+              alt="Brella"
+              width="220"
+              height="87"
+            />
+
+            <nav
+              class="footer__nav footer__nav--join-brella"
+              aria-label="Join Brella"
+            >
+              <p class="footer__heading">Join Brella</p>
+              <ul class="footer__links">
+                <li><a href="#">Our Plan</a></li>
+                <li><a href="#">Employers</a></li>
+                <li><a href="#">Brokers</a></li>
+                <li><a href="#">Members</a></li>
+              </ul>
+            </nav>
+
+            <nav class="footer__nav footer__nav--company" aria-label="Company">
+              <p class="footer__heading">Company</p>
+              <ul class="footer__links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__top-right">
+            <div class="footer__subscribe">
+              <p class="footer__heading">Get the latest</p>
+              <p class="footer__subscribe-desc">
+                Sign up to receive benefits news and insights in your inbox once
+                a month.
+              </p>
+              <form class="footer__form" action="#" method="post">
+                <label class="footer__form-label" for="footer-email"
+                  >Email</label
+                >
+                <div class="footer__form-row">
+                  <input
+                    class="footer__form-input"
+                    id="footer-email"
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    required
+                  />
+                  <button
+                    class="footer__form-btn"
+                    type="submit"
+                    aria-label="Subscribe"
+                  >
+                    <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </form>
+              <ul class="footer__social" aria-label="Social media">
+                <li>
+                  <a
+                    href="#"
+                    class="footer__social-link"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      src="img/instagram.png"
+                      alt="Instagram"
+                      width="26"
+                      height="26"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="footer__social-link" aria-label="Twitter">
+                    <img
+                      src="img/twitter.png"
+                      alt="Twitter"
+                      width="26"
+                      height="26"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="footer__social-link" aria-label="YouTube">
+                    <img
+                      src="img/youtube.png"
+                      alt="YouTube"
+                      width="26"
+                      height="26"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__legal">
+          <p class="footer__legal-p-first">
+            Brella is a limited benefit policy; it is not a substitute for
+            health insurance. The information provided on this website is
+            illustrative only. A complete description of benefits, limitations,
+            and exclusions are provided in your certificate of Insurance and
+            applicable Riders. For a summary of limitations and exclusions, see
+            our <a href="#">FAQ</a>. Payout values listed do not guarantee an
+            amount to be paid for listed conditions. Product not available in
+            all states. All coverage is subject to the terms and conditions of
+            the master group policy.
+          </p>
+          <p class="footer__legal-p-second">
+            Brella is underwritten by Greenhouse Life Insurance Company (NAIC
+            80055). Form No. PFSB11-TX
+          </p>
+          <p class="footer__legal-p-third">
+            Reach us by mail at 2093 Philadelphia Pike #2496, Claymont, DE 19703
+            and by phone at (844) 987-1070.
+          </p>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2021 Brella Insurance Inc. All Rights Reserved.
+          </p>
+          <p class="footer__legal-links">
+            <a href="#">Privacy</a>
+            <span class="footer__legal-sep" aria-hidden="true">|</span>
+            <a href="#">Terms of Service</a>
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
