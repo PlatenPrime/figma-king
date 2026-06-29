@@ -328,11 +328,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 356px);
   align-content: center;
-  gap: 18px;
+  gap: 16px;
   border-radius: 8px;
   background-color: var(--color-white);
   box-shadow: var(--shadow-card);
-  padding: 52px 69px 48px 50px;
+  padding: 50px;
 }
 
 .hero__feature {
@@ -343,7 +343,7 @@ body {
 
 .hero__feature-icon {
   flex-shrink: 0;
-  line-height: 0;
+  margin-top: 7px;
 }
 
 .hero__feature-title {
@@ -353,6 +353,11 @@ body {
   line-height: 24px;
   color: var(--color-primary);
 }
+
+.hero__feature-text {
+  margin-left: -2px;
+
+} 
 
 .hero__feature-desc {
   margin-top: 4px;
@@ -412,6 +417,7 @@ body {
   position: absolute;
   top: 233px;
   left: 0;
+  z-index: 2;
 }
 
 .why-brella__chart-percents {
@@ -446,6 +452,70 @@ body {
   font-weight: 700;
   text-decoration: underline;
 }
+
+.why-brella__chart-bars {
+  position: absolute;
+  left: 275px;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  z-index: 1;
+}
+
+.why-brella__chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 78px;
+}
+
+.why-brella__chart-bar-value {
+  margin-bottom: 2px;
+  font-family: var(--font-raleway);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.why-brella__chart-bar-fill {
+  width: 78px;
+  background-color: var(--button-bg-color-primary);
+}
+
+.why-brella__chart-bar-fill--deductible {
+  height: 150px;
+}
+
+.why-brella__chart-bar-fill--annual {
+  height: 300px;
+}
+
+.why-brella__chart-bar-label {
+  margin-top: 22px;
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.why-brella__chart-source {
+  position: absolute;
+  left: 242px;
+  top: 374px;
+  width: 235px;
+  font-family: var(--font-raleway);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #757575;
+  text-align: right;
+}
+
 /* Brella Brings / Screen 3 */
 
 .brella-brings {
